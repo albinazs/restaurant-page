@@ -3,7 +3,7 @@ import { renderMenu } from './menu';
 
 export const content = document.querySelector('.content');
 
-export function createHtmlElement(type, styleClass, content) {
+export const createHtmlElement = (type, styleClass, content) => {
     const element = document.createElement(type);
     if(styleClass) {
         element.classList.add(styleClass);
@@ -12,28 +12,24 @@ export function createHtmlElement(type, styleClass, content) {
         element.textContent = content;
     }
     return element;
-}
+};
 
 renderHome();
 
-function clearContent() {
-    content.innerHTML = '';
-}
+const clearContent = () => content.innerHTML = '';
 
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('click', e => {
-        if(button.textContent === 'Home') {
-            clearContent();
-            renderHome();
-            console.log('success');
-        }
-        if(button.textContent === 'Menu') {
-            clearContent();
-            renderMenu();
-        }
-        if(button.textContent === 'Menu') {
-            
-        }
-    })
-})
+document.addEventListener('click', e => {
+    if(e.target.textContent === 'Home') {
+        clearContent();
+        renderHome();
+        console.log('success');
+    }
+    if(e.target.textContent === 'Menu') {
+        clearContent();
+        renderMenu();
+        console.log('menu');
+    }
+    if(e.target.textContent === 'Contact') {
+        console.log('contact');
+    }
+});
