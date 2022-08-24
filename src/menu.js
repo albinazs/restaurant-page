@@ -1,11 +1,11 @@
 import { content, createHtmlElement } from './index';
 
-export const renderHome = () => {
+export const renderMenu = () => {
     const header = createHtmlElement('header', null, null);
     const buttonHome = createHtmlElement('button', null, 'Home');
     const buttonMenu = createHtmlElement('button', null, 'Menu');
     const buttonContact = createHtmlElement('button', null, 'Contact');
-    const divMain = createHtmlElement('div', 'home', null);
+    const divMain = createHtmlElement('div', 'menu', null);
     const cursivePara = createHtmlElement('p', 'cursive', 'Osteria');
     const basicPara = createHtmlElement('p', null, 'at the waterfront');
     const footer = createHtmlElement('p', 'footer', 'Osteria at the waterfront is a part of Spencer group');
@@ -20,6 +20,3 @@ export const renderHome = () => {
     divMain.appendChild(basicPara);
     divMain.appendChild(footer);
 };
-
-
-
