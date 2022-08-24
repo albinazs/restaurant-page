@@ -22,8 +22,7 @@ ul {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(./img/home.jpg);
-    background-size: cover;
+    
 }
 
 header {
@@ -42,8 +41,12 @@ button {
     background-color: inherit;
 }
 
-.main {
+.home {
     flex: 1;
+    background-image: url(./img/home.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .cursive {
@@ -55,6 +58,16 @@ button {
 .footer {
     font-size: 0.5rem;
     margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.menu {
+    flex: 1;
+    background-image: url(./img/menu.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
