@@ -14,22 +14,44 @@ export const createHtmlElement = (type, styleClass, content) => {
     return element;
 };
 
-renderHome();
-
 const clearContent = () => content.innerHTML = '';
 
-document.addEventListener('click', e => {
-    if(e.target.textContent === 'Home') {
-        clearContent();
-        renderHome();
-        console.log('success');
-    }
-    if(e.target.textContent === 'Menu') {
-        clearContent();
-        renderMenu();
-        console.log('menu');
-    }
-    if(e.target.textContent === 'Contact') {
-        console.log('contact');
-    }
-});
+const createNavBar = () => {
+    const header = createHtmlElement('header', null, null);
+    const buttonHome = createHtmlElement('button', null, 'Home');
+    const buttonMenu = createHtmlElement('button', null, 'Menu');
+    const buttonContact = createHtmlElement('button', null, 'Contact');
+
+    buttonHome.addEventListener('click', () => createHomePage());
+    buttonMenu.addEventListener('click', () => createMenuPage());
+    buttonContact.addEventListener('click', () => createContactPage());
+
+    content.appendChild(header);
+    header.appendChild(buttonHome);
+    header.appendChild(buttonMenu);
+    header.appendChild(buttonContact);
+};
+
+const createHomePage = () => {
+    clearContent();
+    createNavBar();
+    renderHome();
+    console.log('home');
+};
+
+const createMenuPage = () => {
+    clearContent();
+    createNavBar();
+    renderMenu();
+    console.log('menu');
+};
+
+const createContactPage = () => {
+    clearContent();
+    createNavBar();
+    renderMenu();
+    console.log('contact');
+}
+
+createHomePage();
+
