@@ -37,24 +37,18 @@ const createHomePage = () => {
     clearContent();
     createNavBar();
     renderHome();
-    console.log('home');
 };
 
-const createMenuPage = () => {
+export const createMenuPage = () => {
     clearContent();
     createNavBar();
     renderMenu();
-    console.log('menu');
 };
 
 const createContactPage = () => {
     clearContent();
     createNavBar();
     renderContact();
-    console.log('contact');
 }
 
 createHomePage();
-
-//fix footer on the menu page
-//add hovers & animation
