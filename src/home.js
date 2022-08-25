@@ -7,10 +7,7 @@ export const renderHome = () => {
     const cursivePara = createHtmlElement('p', 'cursive', 'Osteria');
     const basicPara = createHtmlElement('p', null, 'at the waterfront');
     const orderNow = createHtmlElement('button', 'order', 'Order now');
-    orderNow.addEventListener('click', () => {
-        createMenuPage();
-        console.log('test');
-    });
+    orderNow.addEventListener('click', createMenuPage);
     const footer = createHtmlElement('p', 'footer', 'Osteria at the waterfront is a part of Spencer group');
 
     content.appendChild(divMain);
