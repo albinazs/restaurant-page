@@ -43,7 +43,6 @@ button {
     color: inherit;
     background-color: inherit;
     line-height: var(--line-height);
-
 }
 
 button:hover {
@@ -79,13 +78,6 @@ button:hover {
 
 .order:hover {
     border-bottom: none;
-}
-
-.footer {
-    font-size: 0.5rem;
-    margin-bottom: 20px;
-    margin-top: auto;
-    padding-top: 30px;
 }
 
 .menu {
@@ -149,6 +141,13 @@ button:hover {
 .contact-para {
     font-size: 0.7rem;
     color: var(--light-grey-color);
+}
+
+.footer {
+    font-size: 0.5rem;
+    margin-bottom: 20px;
+    margin-top: auto;
+    padding-top: 30px;
 }
 
 
