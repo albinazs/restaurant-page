@@ -1,5 +1,6 @@
 import { renderHome } from './home';
 import { renderMenu } from './menu';
+import { renderContact } from './contact';
 
 export const content = document.querySelector('.content');
 
@@ -49,9 +50,11 @@ const createMenuPage = () => {
 const createContactPage = () => {
     clearContent();
     createNavBar();
-    renderMenu();
+    renderContact();
     console.log('contact');
 }
 
 createHomePage();
 
+//fix footer on the menu page
+//add hovers & animation
